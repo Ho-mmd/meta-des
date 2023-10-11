@@ -11,6 +11,7 @@ qtconnectivity \
 qtgraphicaleffects \
 qtmultimedia \
 qtwebengine \
+qtnetworkauth \
 "
 
 DEPENDS = "cmake-native \
@@ -19,18 +20,21 @@ ${QT_PKGS} \
 vsomeip \
 common-api-c++ \ 
 common-api-c++-someip \
+openssl \
 "
 
 RDEPENDS_${PN} = " \
 qtquickcontrols \
 qtquickcontrols2 \
 qtdeclarative \
-bash \
+qtwebengine \
+qtnetworkauth \
+openssl \
 "
 
 SRC_URI = "git://github.com/SEA-ME-Team4/app-hu.git;protocol=https;nobranch=1 \
 "
-SRCREV = "2d22a82797a40988aded902f99069041bc3ea33d"
+SRCREV = "bfb269cef28bdff5d430e0190c07c241669e28bd"
 
 S = "${WORKDIR}/git"
 
@@ -38,11 +42,6 @@ inherit cmake_qt5
 
 EXTRA_OECMAKE += "-DCommonAPI_DIR=${WORKDIR}/recipe-sysroot/usr/lib/cmake/CommonAPI/ \
 "
-
-do_install:append() {
-    install -m 0755 ${S}/shell/starter.sh ${D}${bindir}/app-hu
-    install -m 0755 ${S}/shell/killer.sh ${D}${bindir}/app-hu
-}
 
 do_find_lib() {
     find ${D}${bindir}/app-hu -executable -type f -exec chrpath -d {} \;
