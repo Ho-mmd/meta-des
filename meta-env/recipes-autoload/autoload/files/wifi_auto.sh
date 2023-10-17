@@ -3,6 +3,7 @@
 start() {
     wpa_supplicant -Dnl80211 -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
     dhcpcd wlan0
+    rdate -s time.bora.net
 }
 
 stop() {
@@ -18,7 +19,7 @@ case "$1" in
       stop
       ;;
   *)
-      echo "Usage: $0 {start|stop}"
+      echo "Usage: /etc/init.d/wifi_auto {start|stop}"
       exit 1
 esac
 
