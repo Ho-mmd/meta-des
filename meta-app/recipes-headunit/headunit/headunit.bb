@@ -10,7 +10,6 @@ QT_PKGS = " \
 qtconnectivity \
 qtmultimedia \
 qtwebengine \
-qtnetworkauth \
 "
 
 DEPENDS = "cmake-native \
@@ -27,15 +26,15 @@ qtquickcontrols \
 qtquickcontrols2 \
 qtdeclarative \
 qtgraphicaleffects \
+qtvirtualkeyboard \
 qtwebengine \
-qtnetworkauth \
 openssl \
 "
 
 SRC_URI = "git://github.com/SEA-ME-Team4/app-hu.git;protocol=https;nobranch=1 \
 file://youtube.pem \
 "
-SRCREV = "3a3531b6abfde7004c1a467b7b2e503bd05eb9a5"
+SRCREV = "4c415575071ce8152c8e53d6b43a688457619378"
 
 S = "${WORKDIR}/git"
 
