@@ -34,7 +34,7 @@ openssl \
 SRC_URI = "git://github.com/SEA-ME-Team4/app-hu.git;protocol=https;nobranch=1 \
 file://youtube.pem \
 "
-SRCREV = "4c415575071ce8152c8e53d6b43a688457619378"
+SRCREV = "f2c45d37e428a22bbd255e7cc99f2ffddee0c570"
 
 S = "${WORKDIR}/git"
 
