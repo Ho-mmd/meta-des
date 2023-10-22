@@ -16,4 +16,4 @@ do_install() {
     cp -R ${WORKDIR}/git/adafruit_bus_device ${D}${libdir}/python3.10/site-packages/
 }
 
-FILES:${PN} += "${libdir}/python3.10/site-packages/adafruit_bus_device/*" 
+FILES:${PN} = "${libdir}/python3.10/site-packages/adafruit_bus_device/*" 

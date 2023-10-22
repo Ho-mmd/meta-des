@@ -15,4 +15,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/git/src_py3/typing_extensions.py ${D}${libdir}/python3.10/site-packages/
 }
 
-FILES:${PN} += "${libdir}/python3.10/site-packages/typing_extensions.py"
+FILES:${PN} = "${libdir}/python3.10/site-packages/typing_extensions.py"
