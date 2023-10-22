@@ -10,7 +10,7 @@ PN = "adafruit_blinka"
 SRCREV = "234688cf57e0cfd88b768a49b57ed630a4077551" 
 S = "${WORKDIR}/git"
 
-RDEPENDS:${PN} += " glibc libgpiod"
+RDEPENDS:${PN} = " libgpiod"
 
 do_delete_files() {
     rm ${S}/src/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein
@@ -26,4 +26,4 @@ do_install() {
     cp -R ${WORKDIR}/git/src/* ${D}${libdir}/python3.10/site-packages/
 }
 
-FILES:${PN} += "${libdir}/python3.10/site-packages/*" 
+FILES:${PN} = "${libdir}/python3.10/site-packages/*" 

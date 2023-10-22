@@ -15,4 +15,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/git/adafruit_ssd1306.py ${D}${libdir}/python3.10/site-packages/
 }
 
-FILES:${PN} += "${libdir}/python3.10/site-packages/adafruit_ssd1306.py"
+FILES:${PN} = "${libdir}/python3.10/site-packages/adafruit_ssd1306.py"

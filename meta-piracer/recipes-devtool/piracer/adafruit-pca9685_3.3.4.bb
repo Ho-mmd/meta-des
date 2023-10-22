@@ -16,4 +16,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/git/adafruit_pca9685.py ${D}${libdir}/python3.10/site-packages/
 }
 
-FILES:${PN} += "${libdir}/python3.10/site-packages/adafruit_pca9685.py"
+FILES:${PN} = "${libdir}/python3.10/site-packages/adafruit_pca9685.py"

@@ -15,4 +15,4 @@ do_install() {
 }
 
 
-FILES:${PN} += "${libdir}/python3.10/site-packages/*"
+FILES:${PN} = "${libdir}/python3.10/site-packages/*"
