@@ -1,6 +1,6 @@
 # meta-hu (headunit) / Yocto Project layer
 
-Layers & Recipes compatible with Yocto Project (Released: Kirkstone)
+Layers & Recipes compatible with Yocto Project
 
 This layer Depends on
 
@@ -53,6 +53,11 @@ This layer Depends on
     - Extra user
     - Auto-login
     - Auto-run (App)
+
+## Quick Guide
+1. Clone all layers that have dependencies
+2. Add layer in bblayers.conf 
+3. Run the "conf.sh" (Change local.conf)
 
 ## Reference
 1. Yocto Project Documentation
