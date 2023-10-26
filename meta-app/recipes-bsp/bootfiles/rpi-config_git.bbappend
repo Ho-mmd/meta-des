@@ -2,6 +2,9 @@
 ENABLE_I2C = "1"
 
 do_deploy:append() {
+    echo "enable_uart=1" >> $CONFIG
+    echo "RPI_USE_U_BOOT = "1"" >> $CONFIG
+
     echo "# CAN" >> $CONFIG
     echo "dtoverlay=seeed-can-fd-hat-v2" >> $CONFIG
     
