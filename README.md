@@ -5,10 +5,20 @@ Layers & Recipes compatible with Yocto Project (Released: Kirkstone)
 This layer Depends on
 
 1. poky (https://github.com/yoctoproject/poky)
+   - branch: kirkstone
+   - commit: 0e4966eb77928a07230e031d6d9c477c01ec9cce
 2. meta-raspberrypi (https://github.com/agherzan/meta-raspberrypi)
+   - branch: master
+   - commit: 482d864b8f1af84915ed6a9641e80af4e49a1f63
 3. meta-qt5 (https://github.com/meta-qt5/meta-qt5)
+   - branch: kirkstone
+   - commit: 31930afca79b74e0c788452d71356c1f045e7979
 4. meta-openembedded/meta-oe (https://github.com/openembedded/meta-openembedded)
+   - branch: kirkstone
+   - commit: 9c5541f7e18a1fac3b8dea71e1ebb8398d58e6ff
 5. meta-python2 (https://github.com/YoeDistro/meta-python2)
+   - branch: kirkstone
+   - commit: f02882e2aa9279ca7becca8d0cedbffe88b5a253
 
 ## Architecture
 ![Layer conf](https://github.com/SEA-ME-Team4/meta-hu/assets/55338823/dcfb5f03-d4bd-4815-870e-6ea0b17d06fe)
@@ -24,7 +34,7 @@ This layer Depends on
     - commonapi-c++-someip
 - Modify other layers recipes to match our application - qtbase, qtwebengine, rpi-config
 
-### meta-piracer
+### meta-piracer 
 
 - Include piracer-py package recipe
 - Include some required recipes to use piracer package  
@@ -37,13 +47,15 @@ This layer Depends on
 
 ### meta-env
 
-- Include recipes about environment setting & init process
+- Include recipes about environment setting
     - Wifi
-    - booting screen
-    - Init script
     - Kernel version
+    - Extra user
     - Auto-login
+    - Auto-run (App)
 
 ## Reference
 1. Yocto Project Documentation
 https://docs.yoctoproject.org/4.0.12/singleindex.html
+2. piracer_py
+https://github.com/twyleg/piracer_py
