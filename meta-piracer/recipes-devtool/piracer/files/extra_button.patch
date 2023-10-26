@@ -1,0 +1,93 @@
+--- a/piracer/gamepads.py	2023-10-24 15:25:29.571906792 +0200
++++ b/piracer/gamepads.py	2023-10-24 15:26:26.756280110 +0200
+@@ -1,4 +1,3 @@
+-# Copyright (C) 2022 twyleg
+ import array
+ import struct
+ import os
+@@ -16,17 +15,19 @@
+     def __init__(self) -> None:
+         self.analog_stick_left = Vector3f()
+         self.analog_stick_right = Vector3f()
+-        self.button_l1: Optional[float]
+-        self.button_l2: Optional[float]
+-        self.button_r1: Optional[float]
+-        self.button_r2: Optional[float]
+-        self.button_x: Optional[bool]
+-        self.button_a: Optional[bool]
+-        self.button_b: Optional[bool]
+-        self.button_y: Optional[bool]
+-        self.button_select: Optional[bool]
+-        self.button_start: Optional[bool]
+-        self.button_home: Optional[bool]
++        self.button_l1 = 0
++        self.button_l2 = 0
++        self.button_l3 = 0
++        self.button_r1 = 0
++        self.button_r2 = 0
++        self.button_r3 = 0
++        self.button_x = 0
++        self.button_a = 0
++        self.button_b = 0
++        self.button_y = 0
++        self.button_select = 0
++        self.button_start = 0
++        self.button_home = 0
+ 
+ 
+ class Joystick(object):
+@@ -168,7 +169,6 @@
+ 
+     def read_data(self) -> ShanWanGamepadInput:
+         _, button_number, button_state, _, axis_number, axis_val = super(ShanWanGamepad, self).poll()
+-
+         if axis_number == 0:
+             self.gamepad_input.analog_stick_left.x = axis_val
+         elif axis_number == 1:
+@@ -183,31 +183,27 @@
+         elif button_number == 11:
+             self.gamepad_input.analog_stick_right.z = button_state
+ 
++        elif button_number == 7:
++            self.gamepad_input.button_r1 = button_state
+         elif button_number == 4:
+-            self.gamepad_input.button_l1 = button_state
++            self.gamepad_input.button_y = button_state            
+         elif button_number == 6:
+-            self.gamepad_input.button_l2 = button_state
+-
+-        elif button_number == 5:
+-            self.gamepad_input.button_r1 = button_state
+-        elif button_number == 7:
+-            self.gamepad_input.button_r2 = button_state
+-
+-        elif button_number == 2:
+-            self.gamepad_input.button_a = button_state
++            self.gamepad_input.button_l1 = button_state
++        elif button_number == 10:
++            self.gamepad_input.button_home = button_state
++        elif button_number == 11:
++            self.gamepad_input.button_start = button_state
++        elif button_number == 12:
++            self.gamepad_input.button_select = button_state
+         elif button_number == 1:
+             self.gamepad_input.button_b = button_state
+         elif button_number == 3:
+             self.gamepad_input.button_x = button_state
+         elif button_number == 0:
+-            self.gamepad_input.button_y = button_state
+-        elif button_number == 1:
+-            self.gamepad_input.button_b = button_state
+-        elif button_number == 12:
+-            self.gamepad_input.button_home = button_state
+-        elif button_number == 8:
+-            self.gamepad_input.button_select = button_state
+-        elif button_number == 9:
+-            self.gamepad_input.button_start = button_state
++            self.gamepad_input.button_a = button_state
+ 
++        elif button_number == 14:
++            self.gamepad_input.button_r3 = button_state
++        elif button_number == 13:
++            self.gamepad_input.button_l3 = button_state    
+         return self.gamepad_input
