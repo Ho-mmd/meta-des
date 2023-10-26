@@ -7,6 +7,7 @@ INSANE_SKIP:${PN} = "already-stripped"
 SRC_URI = "git://github.com/twyleg/piracer_py.git;protocol=https \
 file://ssd1306_ignore.patch \
 file://Motor_direction_modified.patch \
+file://extra_button.patch \
 "
 SRCREV = "7314ec1874388dc4ebc863aa429f82222b534ac1" 
 S = "${WORKDIR}/git"
