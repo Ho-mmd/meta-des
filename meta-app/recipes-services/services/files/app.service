@@ -1,6 +1,6 @@
 [Unit]
 Description= Headunit-app
-After=network.target
+After=local-fs.target sysinit.target
 
 [Service]
 Type=forking
