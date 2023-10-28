@@ -1,0 +1,11 @@
+[Unit]
+Description= Headunit-app
+After=network.target
+
+[Service]
+Type=forking
+User=root
+ExecStart=sh /usr/bin/app-hu/app-service.sh
+
+[Install]
+WantedBy=multi-user.target
