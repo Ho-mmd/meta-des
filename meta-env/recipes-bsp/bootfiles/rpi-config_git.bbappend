@@ -2,8 +2,22 @@
 ENABLE_I2C = "1"
 
 do_deploy:append() {
-    echo "enable_uart=1" >> $CONFIG
-    echo "RPI_USE_U_BOOT = "1"" >> $CONFIG
+    echo "# ENABLE U-BOOT" >> $CONFIG
+    echo "ENABLE_UART = 1" >> $CONFIG
+    echo "RPI_USE_U_BOOT = 1" >> $CONFIG
+    
+    echo "# REMOVE SPLASH SCREEN" >> $CONFIG
+    echo "DISABLE_SPLASH = 1" >> $CONFIG
+    
+    echo "# REMOVE BOOT DELAY" >>$CONFIG
+    echo "BOOT_DELAY = 0" >> $CONFIG
+    echo "BOOT_DELAY_MS = 0" >> $CONFIG
+    
+    echo "# Enable Overclocked" >> $CONFIG
+    echo "ARM_FREQ = 2100" >> $CONFIG
+    echo "GPU_FREQ = 750" >> $CONFIG
+    echo "OVER_VOLTAGE = 6" >> $CONFIG
+    echo "FORCE_TURBO = 1" >> $CONFIG
 
     echo "# CAN" >> $CONFIG
     echo "dtoverlay=seeed-can-fd-hat-v2" >> $CONFIG
@@ -22,5 +36,4 @@ do_deploy:append() {
     echo "# Audio" >> $CONFIG
     echo "dtparam=audio=on" >> $CONFIG
     echo "dtoverlay=vc4-kms-v3d,noaudio" >> $CONFIG
-    
 }

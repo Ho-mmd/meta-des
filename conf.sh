@@ -7,8 +7,6 @@ sed -i "51s|#||g" $CONF
 sed -i "67s|#||g" $CONF
 sed -i "79s|#||g" $CONF
 
-
-
 echo -e "\n# To get sdimg" >> $CONF
 echo "IMAGE_FSTYPES = \"ext4.xz rpi-sdimg\"" >> $CONF
 echo -e "SDIMG_ROOTFS_TYPE = \"ext4.xz\"\n" >> $CONF
@@ -32,12 +30,3 @@ echo -e "KERNEL_DEVICETREE:append = \" \\
     overlays/vc4-kms-dsi-waveshare-panel.dtbo \\
 \"\n" >> $CONF
 
-echo "# Reduce boot delay" >> $CONF
-echo "BOOT_DELAY = \"0\"" >> $CONF
-echo -e "BOOT_DELAY_MS = \"0\"\n" >> $CONF
-
-echo "# Enable Overclocked" >> $CONF
-echo "ARM_FREQ = \"2100\"" >> $CONF
-echo "GPU_FREQ = \"750\"" >> $CONF
-echo "OVER_VOLTAGE = \"6\"" >> $CONF
-echo -e "FORCE_TURBO = \"1\"\n" >> $CONF
