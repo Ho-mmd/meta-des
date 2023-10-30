@@ -1,4 +1,4 @@
-# meta-hu (headunit) / Yocto Project layer
+# meta-des (headunit) / Yocto Project layer
 
 Layers & Recipes compatible with Yocto Project
 
