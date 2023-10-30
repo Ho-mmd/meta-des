@@ -60,7 +60,5 @@ This layer Depends on
 3. Run the "conf.sh" (Change local.conf)
 
 ## Reference
-1. Yocto Project Documentation
-https://docs.yoctoproject.org/4.0.12/singleindex.html
-2. piracer_py
-https://github.com/twyleg/piracer_py
+- [Yocto Project Documentation](https://docs.yoctoproject.org/4.0.12/singleindex.html)
+- [piracer_py](https://github.com/twyleg/piracer_py)
