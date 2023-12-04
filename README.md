@@ -21,7 +21,7 @@ This layer Depends on
    - commit: f02882e2aa9279ca7becca8d0cedbffe88b5a253
 
 ## Architecture
-![Layer conf](https://github.com/SEA-ME-Team4/meta-hu/assets/55338823/dcfb5f03-d4bd-4815-870e-6ea0b17d06fe)
+![Layer conf](https://github.com/SEA-ME-Team4/meta-des/assets/55338823/b12c9d42-251d-4b29-92e0-724dcfeec7fa)
 
 ## Features
 
