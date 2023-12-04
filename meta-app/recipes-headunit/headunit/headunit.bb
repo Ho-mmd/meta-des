@@ -35,18 +35,19 @@ ${QT_PKGS} \
 ${Connect_PKGS} \
 "
 
-SRC_URI = "git://github.com/SEA-ME-Team4/app-hu.git;protocol=https;nobranch=1 \
+SRC_URI = "git://github.com/SEA-ME-Team4/app-des.git;protocol=https;nobranch=1 \
 file://youtube.pem \
 "
-SRCREV = "944e7cf10759add4b46be534ea8ab60335e51fdc"
+SRCREV = "540cff0b8f726eb7f389170677f53294b46978db"
 
 S = "${WORKDIR}/git"
 
 inherit cmake_qt5
 
-EXTRA_OECMAKE += " -DBUILD_EXE=ON \
--DBUILD_LIB=ON \ 
--DBUILD_CONF=ON \
+EXTRA_OECMAKE += " -DBUILD_EXE=1 \
+-DBUILD_LIB=1 \ 
+-DBUILD_CONF=1 \
+-DBUILD_APP=1 \
 "
 
 do_install:append() {
@@ -54,4 +55,7 @@ do_install:append() {
     install -m 0755 ${WORKDIR}/youtube.pem ${D}${sysconfdir}/ssl/certs/
 }
 
-FILES_${PN} += "${bindir}/app-hu"
+FILES:${PN} += " \ 
+${bindir}/app-hu \
+${libdir}/qml/User \
+"
