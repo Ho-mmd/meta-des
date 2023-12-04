@@ -36,4 +36,8 @@ do_deploy:append() {
     echo "# Audio" >> $CONFIG
     echo "dtparam=audio=on" >> $CONFIG
     echo "dtoverlay=vc4-kms-v3d,noaudio" >> $CONFIG
+
+    echo "# pi_camera" >> $CONFIG
+    echo "start_x=1" >> $CONFIG
+    echo "gpu_mem=256" >> $CONFIG
 }
