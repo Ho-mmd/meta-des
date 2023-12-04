@@ -1,4 +1,4 @@
-# meta-hu (headunit) / Yocto Project layer
+# meta-des (headunit) / Yocto Project layer
 
 Layers & Recipes compatible with Yocto Project
 
@@ -50,9 +50,9 @@ This layer Depends on
 - Include recipes about environment setting
     - Wifi
     - Kernel version
-    - Extra user
     - Auto-login
     - Auto-run (App)
+    - config.txt, cmdline.txt
 
 ## Quick Guide
 1. Clone all layers that have dependencies
@@ -60,7 +60,5 @@ This layer Depends on
 3. Run the "conf.sh" (Change local.conf)
 
 ## Reference
-1. Yocto Project Documentation
-https://docs.yoctoproject.org/4.0.12/singleindex.html
-2. piracer_py
-https://github.com/twyleg/piracer_py
+- [Yocto Project Documentation](https://docs.yoctoproject.org/4.0.12/singleindex.html)
+- [piracer_py](https://github.com/twyleg/piracer_py)
