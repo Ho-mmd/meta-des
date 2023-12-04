@@ -25,13 +25,20 @@ This layer Depends on
 
 ## Features
 
-### meta-app
+### meta-middleware
 
-- Include headunit recipe (qt application)
 - Include some recipes about connectivity 
     - vsomeip
     - commonapi-c++
     - commonapi-c++-someip
+- Include some recipes about qtapplication manager
+   - qtapplication manager
+   - qtwayland 
+
+### meta-app
+
+- Include headunit recipe (qt application)
+- Include Camera recipe
 - Modify other layers recipes to match our application - qtbase, qtwebengine, rpi-config
 
 ### meta-piracer 
@@ -52,6 +59,7 @@ This layer Depends on
     - Kernel version
     - Auto-login
     - Auto-run (App)
+    - modules for camera
     - config.txt, cmdline.txt
 
 ## Quick Guide
