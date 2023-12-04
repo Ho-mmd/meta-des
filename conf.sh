@@ -30,3 +30,10 @@ echo -e "KERNEL_DEVICETREE:append = \" \\
     overlays/vc4-kms-dsi-waveshare-panel.dtbo \\
 \"\n" >> $CONF
 
+echo "#Enable Wayland" >> $CONF
+echo -e "DISTRO_FEATURES:append = \"wayland\""
+echo -e "CORE_IMAGE_EXTRA_INSTALL = \"wayland\""
+echo -e "PACKAGECONFIG:remove:pn-qtwayland = \"xcomposite-glx\""
+
+echo "#Enable Camera" >> $CONF
+echo -e "VIDEO_CAMERA = \"1\""
