@@ -27,13 +27,12 @@ echo -e "KERNEL_MODULE_AUTOLOAD += \"i2c-dev i2c-bcm2708\"\n" >> $CONF
 echo "#Enable CAN & DSI" >> $CONF
 echo -e "KERNEL_DEVICETREE:append = \" \\ 
     overlays/seeed-can-fd-hat-v2.dtbo \\
-    overlays/vc4-kms-dsi-waveshare-panel.dtbo \\
 \"\n" >> $CONF
 
 echo "#Enable Wayland" >> $CONF
-echo -e "DISTRO_FEATURES:append = \"wayland\""
-echo -e "CORE_IMAGE_EXTRA_INSTALL = \"wayland\""
-echo -e "PACKAGECONFIG:remove:pn-qtwayland = \"xcomposite-glx\""
+echo -e "DISTRO_FEATURES:append = \"wayland\"" >> $CONF
+echo -e "CORE_IMAGE_EXTRA_INSTALL = \"wayland\"" >> $CONF
+echo -e "PACKAGECONFIG:remove:pn-qtwayland = \"xcomposite-glx\"" >> $CONF
 
 echo "#Enable Camera" >> $CONF
-echo -e "VIDEO_CAMERA = \"1\""
+echo -e "VIDEO_CAMERA = \"1\"" >> $CONF
