@@ -1,6 +1,6 @@
 SUMMARY = "Python Serial Port Extension"
 AUTHOR = "Chris Liechti <cliechti@gmx.net>"
-LICENSE = "BSD"
+LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=520e45e59fc2cf94aa53850f46b86436"
 
 SRC_URI = "git://github.com/pyserial/pyserial.git;protocol=https;nobranch=1"
